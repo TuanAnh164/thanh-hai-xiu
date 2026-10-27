@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { MapPin, Compass, ArrowRight, Waves, Trees, Home, Building2 } from "lucide-react";
+import { ArrowRight, Waves, Trees, Home, Building2 } from "lucide-react";
 
 interface LandArea {
   id: string;
@@ -78,7 +78,7 @@ export default function HometownPerspectives() {
           </p>
         </div>
 
-        {/* Tab switcher (horizontal scroll on mobile) */}
+        {/* Tab switcher */}
         <div className="flex gap-2 overflow-x-auto pb-3 mb-8 no-scrollbar sm:flex-wrap">
           {areas.map((area) => {
             const isActive = activeTab === area.id;
@@ -89,7 +89,7 @@ export default function HometownPerspectives() {
                 onClick={() => setActiveTab(area.id)}
                 className={`flex items-center gap-2 px-4 sm:px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold shrink-0 transition-[background-color,color,transform] duration-200 active:scale-95 ${
                   isActive
-                    ? "bg-stone-900 text-white "
+                    ? "bg-stone-900 text-white"
                     : "bg-white text-stone-700 hover:bg-stone-200 border border-stone-200"
                 }`}
               >
@@ -101,7 +101,7 @@ export default function HometownPerspectives() {
         </div>
 
         {/* Area Detail Showcase */}
-        <div className="p-6 sm:p-10 lg:p-12 rounded-3xl bg-white border border-stone-300 ">
+        <div className="p-6 sm:p-10 lg:p-12 rounded-3xl bg-white border border-stone-300">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
             
             <div className="lg:col-span-7">
@@ -121,7 +121,7 @@ export default function HometownPerspectives() {
                   href="https://zalo.me/0982045879"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-amber-700 hover:bg-amber-800 text-white font-bold text-sm transition-[transform,background-color] duration-200 hover:scale-105 active:scale-95 "
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-amber-700 hover:bg-amber-800 text-white font-bold text-sm transition-[transform,background-color] duration-200 hover:scale-105 active:scale-95"
                 >
                   <span>Hỏi Thêm Về {current.shortName} Qua Zalo</span>
                   <ArrowRight className="w-4 h-4 text-white" />
@@ -130,12 +130,14 @@ export default function HometownPerspectives() {
             </div>
 
             <div className="lg:col-span-5">
-              <div className="rounded-2xl overflow-hidden bg-stone-100 border border-stone-200 ">
+              <div className="rounded-2xl overflow-hidden bg-stone-100 border border-stone-200">
                 <div className="aspect-[4/3] w-full overflow-hidden">
                   <img
                     src={current.image}
                     alt={current.name}
                     className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
                 <div className="p-3 bg-stone-50 text-xs text-stone-600 flex items-center justify-between">

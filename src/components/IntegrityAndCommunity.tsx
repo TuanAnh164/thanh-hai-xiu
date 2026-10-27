@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import React from "react";
 import { FileCheck, Users } from "lucide-react";
@@ -44,6 +44,8 @@ export default function IntegrityAndCommunity() {
                   src="/images/so_hong.png"
                   alt="Sổ hồng minh bạch pháp lý"
                   className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <div className="p-3 bg-stone-50 text-xs font-semibold text-stone-700 flex items-center justify-between">
@@ -73,6 +75,8 @@ export default function IntegrityAndCommunity() {
                   src="/images/event_phongdien.jpg"
                   alt="Gặp mặt Hội Bất Động Sản Phong Điền"
                   className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <div className="p-3 bg-stone-50 text-xs text-stone-600">

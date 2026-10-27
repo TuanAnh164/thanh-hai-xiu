@@ -25,8 +25,8 @@ export default function Home() {
         });
       },
       {
-        rootMargin: "0px 0px -10% 0px",
-        threshold: 0.12,
+        rootMargin: "0px 0px -50px 0px",
+        threshold: 0.05,
       }
     );
 
@@ -38,7 +38,7 @@ export default function Home() {
 
   return (
     <div className="min-h-[100svh] flex flex-col bg-[#FAF8F5] text-stone-900 relative selection:bg-amber-700 selection:text-white pb-20 md:pb-0">
-      {/* Warm natural morning sunlight particles */}
+      {/* Warm natural morning sunlight particles - High Performance GPU Optimized */}
       <WarmSunlightBackground />
 
       {/* Floating friendly navigation */}

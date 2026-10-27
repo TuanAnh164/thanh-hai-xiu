@@ -8,7 +8,10 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 px-4 sm:px-6 lg:px-8 pt-3 sm:pt-4 transition-[padding] duration-200">
-      <div className="max-w-7xl mx-auto rounded-full bg-[#FAF8F5]/95 backdrop-blur-md py-2.5 sm:py-3 px-4 sm:px-6 border border-[#E7E3DC] flex items-center justify-between gap-4 ">
+      <div
+        className="max-w-7xl mx-auto rounded-full bg-[#FAF8F5]/95 backdrop-blur-md py-2.5 sm:py-3 px-4 sm:px-6 border border-[#E7E3DC] flex items-center justify-between gap-4"
+        style={{ WebkitBackdropFilter: "blur(12px)", transform: "translateZ(0)" }}
+      >
         
         {/* Brand */}
         <a href="#ve-toi" className="flex items-center gap-2.5 sm:gap-3 group">
@@ -17,6 +20,7 @@ export default function Header() {
               src="/images/logo_transparent.png"
               alt="Logo Trần Thanh Hải"
               className="w-full h-full object-contain"
+              decoding="async"
             />
           </div>
           <div>
@@ -24,7 +28,7 @@ export default function Header() {
               Trần Thanh Hải
             </span>
             <div className="flex items-center gap-1.5">
-              <span className="w-2 h-2 rounded-full bg-emerald-600 inline-block " />
+              <span className="w-2 h-2 rounded-full bg-emerald-600 inline-block" />
               <span className="text-[11px] font-medium text-emerald-800">
                 Thanh Hải Xíu • Phường Phong Phú, TP Huế
               </span>
@@ -56,7 +60,7 @@ export default function Header() {
         <div className="hidden sm:flex items-center">
           <a
             href="tel:0982045879"
-            className="flex items-center gap-2 px-5 py-2.5 rounded-full bg-amber-700 hover:bg-amber-800 text-white font-bold text-sm transition-[transform,background-color] duration-200 hover:scale-105 active:scale-95 "
+            className="flex items-center gap-2 px-5 py-2.5 rounded-full bg-amber-700 hover:bg-amber-800 text-white font-bold text-sm transition-[transform,background-color] duration-200 hover:scale-105 active:scale-95"
           >
             <Phone className="w-4 h-4 text-white" />
             <span>0982 045 879</span>
@@ -75,7 +79,7 @@ export default function Header() {
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="lg:hidden mt-2 max-w-7xl mx-auto rounded-3xl bg-[#FAF8F5] p-6 border border-[#E7E3DC]  animate-in fade-in slide-in-from-top-2 duration-200">
+        <div className="lg:hidden mt-2 max-w-7xl mx-auto rounded-3xl bg-[#FAF8F5] p-6 border border-[#E7E3DC] animate-in fade-in slide-in-from-top-2 duration-200">
           <nav className="flex flex-col gap-3 text-base font-semibold text-stone-800">
             <a
               href="#nep-song"
@@ -118,10 +122,10 @@ export default function Header() {
               <span>Giao Lưu Thân Tình</span>
             </a>
 
-            <div className="pt-3  flex flex-col gap-2">
+            <div className="pt-3 flex flex-col gap-2">
               <a
                 href="tel:0982045879"
-                className="flex items-center justify-center gap-2 py-3 rounded-full bg-amber-700 text-white font-bold text-sm "
+                className="flex items-center justify-center gap-2 py-3 rounded-full bg-amber-700 text-white font-bold text-sm"
               >
                 <Phone className="w-4 h-4" />
                 <span>Gọi Trực Tiếp: 0982 045 879</span>
@@ -130,10 +134,18 @@ export default function Header() {
                 href="https://zalo.me/0982045879"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 py-3 rounded-full bg-emerald-700 text-white font-bold text-sm "
+                className="flex items-center justify-center gap-2 py-3 rounded-full bg-emerald-700 text-white font-bold text-sm"
               >
                 <MessageCircle className="w-4 h-4" />
                 <span>Nhắn Zalo Anh Hải</span>
+              </a>
+              <a
+                href="https://www.facebook.com/haixiu.thanh"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2 py-3 rounded-full bg-stone-900 text-white font-bold text-sm"
+              >
+                <span>Facebook Trần Thanh Hải</span>
               </a>
             </div>
           </nav>

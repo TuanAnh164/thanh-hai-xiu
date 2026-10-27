@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import React from "react";
 import { ArrowDown, MessageCircle, Heart, Coffee, Bike, Users, Sparkles } from "lucide-react";
@@ -87,6 +87,7 @@ export default function Hero() {
                   src="/images/hero_hai.png"
                   alt="Trần Thanh Hải cùng phu nhân tại Huế"
                   className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                  decoding="async"
                 />
               </div>
 

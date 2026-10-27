@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import React, { useState, useEffect } from "react";
 import { Phone, MessageCircle } from "lucide-react";
@@ -7,8 +7,15 @@ export default function MobileBottomBar() {
   const [show, setShow] = useState(false);
 
   useEffect(() => {
+    let ticking = false;
     const handleScroll = () => {
-      setShow(window.scrollY > 150);
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          setShow(window.scrollY > 150);
+          ticking = false;
+        });
+        ticking = true;
+      }
     };
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
@@ -17,9 +24,14 @@ export default function MobileBottomBar() {
   if (!show) return null;
 
   return (
-    <div className="fixed bottom-4 inset-x-4 z-50 md:hidden animate-in fade-in slide-in-from-bottom-4 duration-300">
-      <div className="max-w-md mx-auto p-2 rounded-full bg-stone-900/95 backdrop-blur-lg flex items-center justify-between gap-2 border border-stone-800">
-        
+    <div
+      className="fixed bottom-4 inset-x-4 z-50 md:hidden animate-in fade-in slide-in-from-bottom-4 duration-300"
+      style={{ transform: "translateZ(0)" }}
+    >
+      <div
+        className="max-w-md mx-auto p-2 rounded-full bg-stone-900/95 backdrop-blur-lg flex items-center justify-between gap-2 border border-stone-800"
+        style={{ WebkitBackdropFilter: "blur(12px)" }}
+      >
         {/* Call button */}
         <a
           href="tel:0982045879"
@@ -39,7 +51,6 @@ export default function MobileBottomBar() {
           <MessageCircle className="w-4 h-4" />
           <span>Nhắn Zalo</span>
         </a>
-
       </div>
     </div>
   );

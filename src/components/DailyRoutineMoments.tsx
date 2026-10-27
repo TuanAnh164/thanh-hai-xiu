@@ -84,7 +84,7 @@ export default function DailyRoutineMoments() {
           </p>
         </div>
 
-        {/* Routine Switcher Pills (Horizontal scrolling on mobile) */}
+        {/* Routine Switcher Pills */}
         <div className="flex gap-2 overflow-x-auto pb-3 mb-8 no-scrollbar sm:flex-wrap">
           {routines.map((item) => {
             const isActive = item.id === activeId;
@@ -95,7 +95,7 @@ export default function DailyRoutineMoments() {
                 onClick={() => setActiveId(item.id)}
                 className={`flex items-center gap-2 px-4 sm:px-5 py-2.5 sm:py-3 rounded-full text-xs sm:text-sm font-bold shrink-0 transition-[background-color,color,transform] duration-200 active:scale-95 ${
                   isActive
-                    ? "bg-amber-800 text-white "
+                    ? "bg-amber-800 text-white"
                     : "bg-white text-stone-700 hover:bg-stone-200 border border-stone-200"
                 }`}
               >
@@ -107,7 +107,7 @@ export default function DailyRoutineMoments() {
         </div>
 
         {/* Selected Routine Showcase Card */}
-        <div className="p-6 sm:p-10 lg:p-12 rounded-3xl bg-white border border-stone-300 ">
+        <div className="p-6 sm:p-10 lg:p-12 rounded-3xl bg-white border border-stone-300">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
             
             {/* Content */}
@@ -148,12 +148,14 @@ export default function DailyRoutineMoments() {
 
             {/* Photo */}
             <div className="lg:col-span-5">
-              <div className="rounded-2xl overflow-hidden bg-stone-100 border border-stone-200 ">
+              <div className="rounded-2xl overflow-hidden bg-stone-100 border border-stone-200">
                 <div className="aspect-[4/3] sm:aspect-[4/4] lg:aspect-[4/3] w-full overflow-hidden">
                   <img
                     src={current.image}
                     alt={current.title}
                     className="w-full h-full object-cover object-center transition-transform duration-500 hover:scale-105"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
                 <div className="p-3 bg-stone-50 text-xs text-stone-600 flex items-center justify-between">
