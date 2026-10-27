@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React from "react";
 import { Play, ArrowUpRight } from "lucide-react";
@@ -7,47 +7,47 @@ interface ReelItem {
   id: string;
   title: string;
   views: string;
-  desc: string;
   category: string;
+  desc: string;
 }
 
 const reelsData: ReelItem[] = [
   {
     id: "reel-1",
-    title: "Khảo Sát Thực Địa Tuyến Đường Liên Xã Điền Hương",
-    views: "11K+ lượt xem",
-    desc: "Ghi lại chân thực quy mô tuyến đường liên xã kết nối ra biển, đánh giá tiềm năng hình thành khu dân cư.",
-    category: "Thực địa nổi bật"
+    title: "Buổi Sớm Khảo Sát Tuyến Đường Mới Điền Hương",
+    views: "11K lượt xem",
+    category: "Thực Địa Phong Điền",
+    desc: "Đi bộ kiểm tra hạ tầng giao thông kết nối các xã ven phá Tam Giang và ven biển, chia sẻ góc nhìn thực tế cùng bà con."
   },
   {
     id: "reel-2",
-    title: "Nhịp Sống Buổi Sớm Tại Xóm Chợ Điền Hương",
+    title: "Gặp Gỡ Bà Con & Không Khí Phiên Chợ Điền Hương",
     views: "9.8K lượt xem",
-    desc: "Những khoảnh khắc mộc mạc, gần gũi cùng bà con quê nhà, sẻ chia không khí nhộn nhịp của buổi chợ sáng.",
-    category: "Đời thường bản địa"
+    category: "Nhịp Sống Quê Hương",
+    desc: "Ghi lại những khoảnh khắc chân chất, bình dị nhất của người dân quê nhà mỗi sớm mai."
   },
   {
     id: "reel-3",
-    title: "Kiểm Tra Mốc Giới & Quy Hoạch Đất Trước Khi Giao Dịch",
+    title: "Thực Tế Ranh Giới Thửa Đất Có Sổ Đỏ Rõ Ràng",
     views: "7.5K lượt xem",
-    desc: "Kinh nghiệm thực chiến kiểm tra sổ đỏ, tọa độ trích lục tránh rủi ro chồng lấn hay vướng hành lang kỹ thuật.",
-    category: "Pháp lý thực tế"
+    category: "Pháp Lý Minh Bạch",
+    desc: "Chia sẻ kinh nghiệm kiểm tra mốc giới, đường đi thực tế trước khi bà con xuống tiền an cư hay đầu tư."
   }
 ];
 
 export default function ReelsTheater() {
   return (
-    <section id="video-reels" className="py-20 lg:py-32 relative">
+    <section id="thuo-phim" className="py-20 lg:py-28 bg-slate-950 text-white relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
         
-        {/* Section Header */}
+        {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <div>
-            <div className="text-emerald-400 text-xs font-bold mb-2">
-              Thước Phim Chân Thực Facebook Reels
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-semibold mb-3">
+              <span>Nền Tảng Facebook Cá Nhân</span>
             </div>
-            <h2 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
-              Khảo Sát Hiện Trường Chân Thực
+            <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight">
+              Thước Phim Chân Thực Facebook Reels
             </h2>
             <p className="text-base text-slate-300 mt-3 max-w-2xl font-normal">
               Những thước phim ngắn tiếp cận hàng chục ngàn lượt xem trên Facebook, ghi lại thực tế sống động từng góc đất, con đường Phong Điền.
@@ -55,7 +55,7 @@ export default function ReelsTheater() {
           </div>
 
           <a
-            href="https://facebook.com"
+            href="https://www.facebook.com/haixiu.thanh/reels/"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-slate-900 hover:bg-slate-800 text-white font-bold text-sm transition-[transform,background-color] duration-200 hover:scale-105"
@@ -101,7 +101,7 @@ export default function ReelsTheater() {
 
               <div className="mt-8 pt-4">
                 <a
-                  href="https://facebook.com"
+                  href="https://www.facebook.com/haixiu.thanh/reels/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-400 hover:text-emerald-300 transition-colors"

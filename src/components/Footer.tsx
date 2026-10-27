@@ -1,7 +1,7 @@
-"use client";
+﻿"use client";
 
 import React from "react";
-import { ArrowUp, Heart } from "lucide-react";
+import { ArrowUp } from "lucide-react";
 
 export default function Footer() {
   const scrollToTop = () => {
@@ -11,7 +11,7 @@ export default function Footer() {
   return (
     <footer className="bg-stone-900 text-stone-300 py-16">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 pb-12">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12">
           
           <div className="md:col-span-6">
             <div className="flex items-center gap-3 mb-4">
@@ -53,7 +53,7 @@ export default function Footer() {
               Kết Nối Bạn Bè
             </span>
             <ul className="space-y-2.5 text-xs text-stone-400">
-              <li><a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 transition-colors">Facebook Cá Nhân (5.5K Bạn Đọc)</a></li>
+              <li><a href="https://www.facebook.com/haixiu.thanh" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 transition-colors">Facebook Cá Nhân (5.5K Bạn Đọc)</a></li>
               <li><a href="https://zalo.me/0982045879" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 transition-colors">Zalo: 0982 045 879</a></li>
               <li className="pt-2"><span className="inline-block px-3 py-1 rounded-full bg-stone-800 text-xs font-semibold text-amber-400">Hội BĐS Phong Điền</span></li>
             </ul>

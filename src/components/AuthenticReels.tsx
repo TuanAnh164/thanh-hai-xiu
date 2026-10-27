@@ -1,13 +1,14 @@
-"use client";
+﻿"use client";
 
 import React from "react";
-import { Play, ArrowUpRight, Video } from "lucide-react";
+import { Play, ArrowUpRight } from "lucide-react";
 
 interface ReelStory {
   id: string;
   title: string;
   views: string;
   desc: string;
+  url: string;
 }
 
 const reelStories: ReelStory[] = [
@@ -15,19 +16,22 @@ const reelStories: ReelStory[] = [
     id: "reel-1",
     title: "Buổi Sớm Khảo Sát Tuyến Đường Liên Xã Điền Hương",
     views: "11K+ lượt xem",
-    desc: "Đi bộ dọc con đường mới mở rộng, ngắm nhìn cây cầu và lối vào thôn xóm, chia sẻ cùng bà con về sự thay đổi của làng quê."
+    desc: "Đi bộ dọc con đường mới mở rộng, ngắm nhìn cây cầu và lối vào thôn xóm, chia sẻ cùng bà con về sự thay đổi của làng quê.",
+    url: "https://www.facebook.com/reel/3086153445049741/"
   },
   {
     id: "reel-2",
     title: "Nhịp Sống Mộc Mạc Tại Xóm Chợ Điền Hương",
     views: "9.8K lượt xem",
-    desc: "Ghi lại nụ cười của các mệ, các o đi chợ sớm, tiếng chào hỏi thân thương đậm đà chất giọng Huế."
+    desc: "Ghi lại nụ cười của các mệ, các o đi chợ sớm, tiếng chào hỏi thân thương đậm đà chất giọng Huế.",
+    url: "https://www.facebook.com/reel/895783603624902/"
   },
   {
     id: "reel-3",
     title: "Kinh Nghiệm Kiểm Tra Mốc Giới Thực Địa Trước Khi Quyết Định",
     views: "7.5K lượt xem",
-    desc: "Chia sẻ chân tình cách xem mốc giới, trích lục bản đồ địa chính để bà con an tâm, không lo tranh chấp."
+    desc: "Chia sẻ chân tình cách xem mốc giới, trích lục bản đồ địa chính để bà con an tâm, không lo tranh chấp.",
+    url: "https://www.facebook.com/reel/2299225613953947/"
   }
 ];
 
@@ -51,7 +55,7 @@ export default function AuthenticReels() {
           </div>
 
           <a
-            href="https://facebook.com"
+            href="https://www.facebook.com/haixiu.thanh"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white hover:bg-stone-100 border border-stone-300 text-stone-800 font-bold text-sm transition-[transform,background-color] duration-200 hover:scale-105"
@@ -87,9 +91,9 @@ export default function AuthenticReels() {
                 </p>
               </div>
 
-              <div className="mt-8 pt-4 pt-4">
+              <div className="mt-8 pt-4">
                 <a
-                  href="https://facebook.com"
+                  href={reel.url}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1.5 text-xs font-bold text-amber-800 hover:text-amber-900 transition-colors"
